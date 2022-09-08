@@ -1,9 +1,9 @@
 ##Goal: Print a randm song from an artist we give the program to the console
 
-##Log in to spotify
-##Send an artist to Spotify
-##Receive a set of results
-##Pick a random one
+##Log in to spotify - Yes
+##Send an artist to Spotify - Mostly
+##Receive a set of results - Mostly
+##Pick a random one - Mostly
 ##Print to console---->
 
 import spotipy
@@ -18,7 +18,7 @@ client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secr
 
 sp = spotipy.Spotify(client_credentials_manager = client_credentials_manager)
 
-picked_artist = 'Billie Eilish'
+picked_artist = input('Please enter an artist')
 
 artist_name = []
 
@@ -33,9 +33,7 @@ def get_songs(artist):
         for i, t in enumerate(track_results['tracks']['items']):
             ##artist_name.append(t['artists'][0]['name'])
             track_name.append(t['name'])
-           ## track_id.append(t['id'])
-            ##popularity.append(t['popularity'])
- 
+
     
     return track_name
 
@@ -44,8 +42,6 @@ print(selected_songs)
 game_song_index = random.randint(0,len(selected_songs)-1)
 print(selected_songs[game_song_index])
 
-
-##Here's some hot garbage to demonstrate branches, a function that crashes everything
 
 
 

@@ -45,6 +45,8 @@ game_song_index = random.randint(0,len(selected_songs)-1)
 print(selected_songs[game_song_index])
 
 
+##Here's some hot garbage to demonstrate branches, a function that crashes everything
+
 
 
 
